@@ -63,7 +63,8 @@ export default buildConfig({
       userHasAccessToAllTenants: (user) => isSuperAdmin(user),
     }),
     vercelBlobStorage({
-      enabled: true, // Optional, defaults to true
+      enabled: !!process.env.BLOB_READ_WRITE_TOKEN, // only enables when token is present 
+      // default: enabled: true,
       // Specify which collections should use Vercel Blob
       collections: {
         media: true,
