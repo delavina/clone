@@ -19,7 +19,9 @@
         "name": "next"
       }
     ],
+    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
+    // "modulePaths": ["."], (activate with TypeScript 7.0l)
     "paths": {
       "@/*": ["./*"],
       "@payload-config": ["./payload.config.ts"]
